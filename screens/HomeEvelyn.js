@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { Image } from "expo-image";
 import { useNavigation } from "@react-navigation/native";
 
 export default function HomeEvelyn() {
@@ -10,7 +11,7 @@ export default function HomeEvelyn() {
             <TouchableOpacity
                 onPress={() => navigation.navigate("Evelyn")}
             >
-                <Text style={styles.text}>Minha página Secundária Evelyn</Text>
+                <Image source={require("../assets/roupa2.jpg")} style={styles.img} />
             </TouchableOpacity>
         </View>
     );
@@ -22,6 +23,14 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#f8f8f8",
+    },
+    img: {
+        width: 300,
+        height: 300,
+        borderRadius: 20,
+        borderWidth: 2,
+        borderColor: "rgba(119, 6, 36, 1)",
+        alignSelf: "center",
     },
     text: {
         fontSize: 24,
